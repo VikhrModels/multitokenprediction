@@ -18,7 +18,7 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 # Для обучения устанавливаем n_future_tokens = 10,
 # но для вычисления loss используем только первую prediction (индекс 0)
 
-model.config.n_future_tokens = 10
+model.config.n_future_tokens = 3
 
 import wandb
 wandb.init(project="llama_mtp", config={
